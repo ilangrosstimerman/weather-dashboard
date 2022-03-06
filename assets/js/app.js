@@ -41,3 +41,5 @@ if (JSON.parse(localStorage.getItem("cityArray") !== null)) {
     "http://api.openweathermap.org/data/2.5/forecast?q=" +
     citySearch +
     "&appid=18a8feef5d0c615b7e0d94298dc9dfbe";
+
+  }
