@@ -43,3 +43,32 @@ if (JSON.parse(localStorage.getItem("cityArray") !== null)) {
     "&appid=18a8feef5d0c615b7e0d94298dc9dfbe";
 
   }
+
+
+  //today's info
+
+  var todayTemp;
+  var todayWS;
+  var todayHumidity;
+  var UVInd;
+  var cityName;
+  $.ajax({
+    url: currentQueryURL,
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
+    latitude = response.coord.lat;
+    longitude = response.coord.lon;
+    UVIndURL =
+      "http://api.openweathermap.org/data/2.5/uvi?appid=18a8feef5d0c615b7e0d94298dc9dfbe&lat=" +
+      latitude +
+      "&lon=" +
+      longitude;
+    todayTemp = (response.main.temp - 273) * (9 / 5) + 32;
+    todayHumidity = response.main.humidity;
+    todayWS = response.wind.speed;
+    UVInd;
+    cityName = response.name;
+    cityStorage.push(response.name);
+  
+  })
