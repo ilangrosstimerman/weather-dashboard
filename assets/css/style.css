@@ -17,7 +17,7 @@
         border: 1px solid grey;
         border-left: none;
         cursor: pointer;
-
+     
 }
 label{
     font-weight: bold;
@@ -25,11 +25,10 @@ label{
 }
 body{
     background-color: rgb(235, 235, 235);
-} 
-
+}
 #weatherInfo{
     visibility: hidden;
-
+    
 }
 #cityCurrent{
     background-color: white;
@@ -59,4 +58,5 @@ body{
 }
 #UVIndex{
     color: white;
+
 }
